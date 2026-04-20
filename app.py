@@ -112,7 +112,7 @@ with st.sidebar:
     churn_days = st.number_input("Churn Threshold (days)", 30, 365, 90, 10)
 
 # ===== Demo Data =====
-def generate_demo_data(n=5000):
+def generate_demo_data(n=50000):
     np.random.seed(42)
     today = datetime.now()
     records = []
@@ -163,7 +163,7 @@ if uploaded_file:
     st.sidebar.success(f"✅ {len(df):,} rows loaded")
 elif use_demo:
     df = generate_demo_data()
-    st.sidebar.info("🧪 Demo data (5,000 rows)")
+    st.sidebar.info("🧪 Demo data (50,000 rows)")
 else:
     st.info("👈 Upload CSV or check Demo Data")
     st.stop()
