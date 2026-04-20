@@ -103,7 +103,7 @@ with st.sidebar:
     st.divider()
     st.header("📮 DM Settings")
     dm_cost = st.number_input("Cost per DM (JPY)", 50, 500, 80, 10)
-    dm_budget = st.number_input("DM Budget (x 10,000 JPY)", 10, 1000, 100, 10)
+    dm_budget = st.number_input("DM Budget (x 10,000 JPY)", 10, 10000, 700, 10)
     max_sends = int(dm_budget * 10000 / dm_cost)
     st.info(f"Max sends: {max_sends:,}")
     st.divider()
